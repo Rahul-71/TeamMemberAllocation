@@ -7,27 +7,27 @@ const Employees = () => {
 
 
   const [employees, setEmployees] = useState([
-    { "id": 1, "fullName": "Merridie Labrenz", "designation": "React Developer", "gender": "female", "teamName": "Team-C" },
-    { "id": 2, "fullName": "Tildi Gunstone", "designation": "Node Developer", "gender": "male", "teamName": "Team-D" },
-    { "id": 3, "fullName": "Sergei Corriea", "designation": "Javascript Developer", "gender": "female", "teamName": "Team-A" },
-    { "id": 4, "fullName": "Callida Illston", "designation": "Javascript Developer", "gender": "male", "teamName": "Team-A" },
-    { "id": 5, "fullName": "Sollie Fomichyov", "designation": "Javascript Developer", "gender": "male", "teamName": "Team-C" },
-    { "id": 6, "fullName": "Niki Blamire", "designation": "Java Developer", "gender": "male", "teamName": "Team-D" },
-    { "id": 7, "fullName": "Bertrando Elcome", "designation": "Python Developer", "gender": "female", "teamName": "Team-B" },
-    { "id": 8, "fullName": "Cyndi Manclark", "designation": "Node Developer", "gender": "male", "teamName": "Team-B" },
-    { "id": 9, "fullName": "Matty Brammall", "designation": "SQL Developer", "gender": "female", "teamName": "Team-A" },
-    { "id": 10, "fullName": "Tabbie Yaakov", "designation": "Java Developer", "gender": "female", "teamName": "Team-C" },
-    { "id": 11, "fullName": "Cori Hubbins", "designation": "Python Developer", "gender": "female", "teamName": "Team-D" },
-    { "id": 12, "fullName": "Con Melville", "designation": "Java Developer", "gender": "female", "teamName": "Team-B" },
-    { "id": 13, "fullName": "Dalli Shimmings", "designation": "Javascript Developer", "gender": "female", "teamName": "Team-C" },
-    { "id": 14, "fullName": "Patrizia Sarjant", "designation": "Java Developer", "gender": "male", "teamName": "Team-D" },
-    { "id": 15, "fullName": "Lauraine Jackalin", "designation": "Python Developer", "gender": "male", "teamName": "Team-B" },
-    { "id": 16, "fullName": "Ebenezer Josskovitz", "designation": "Python Developer", "gender": "female", "teamName": "Team-B" },
-    { "id": 17, "fullName": "Aggi Graves", "designation": "Javascript Developer", "gender": "female", "teamName": "Team-A" },
-    { "id": 18, "fullName": "Horton Falkus", "designation": "Node Developer", "gender": "female", "teamName": "Team-B" },
-    { "id": 19, "fullName": "Lainey Collar", "designation": "Java Developer", "gender": "female", "teamName": "Team-A" },
-    { "id": 20, "fullName": "Filip Brockley", "designation": "Java Developer", "gender": "male", "teamName": "Team-A" },
-    { "id": 21, "fullName": "Yetta Fidock", "designation": "React Developer", "gender": "female", "teamName": "Team-A" },
+    { "id": 1, "fullName": "Merridie Labrenz", "designation": "React Developer", "gender": "female", "teamName": "TeamC" },
+    { "id": 2, "fullName": "Tildi Gunstone", "designation": "Node Developer", "gender": "male", "teamName": "TeamD" },
+    { "id": 3, "fullName": "Sergei Corriea", "designation": "Javascript Developer", "gender": "female", "teamName": "TeamA" },
+    { "id": 4, "fullName": "Callida Illston", "designation": "Javascript Developer", "gender": "male", "teamName": "TeamA" },
+    { "id": 5, "fullName": "Sollie Fomichyov", "designation": "Javascript Developer", "gender": "male", "teamName": "TeamC" },
+    { "id": 6, "fullName": "Niki Blamire", "designation": "Java Developer", "gender": "male", "teamName": "TeamD" },
+    { "id": 7, "fullName": "Bertrando Elcome", "designation": "Python Developer", "gender": "female", "teamName": "TeamB" },
+    { "id": 8, "fullName": "Cyndi Manclark", "designation": "Node Developer", "gender": "male", "teamName": "TeamB" },
+    { "id": 9, "fullName": "Matty Brammall", "designation": "SQL Developer", "gender": "female", "teamName": "TeamA" },
+    { "id": 10, "fullName": "Tabbie Yaakov", "designation": "Java Developer", "gender": "female", "teamName": "TeamC" },
+    { "id": 11, "fullName": "Cori Hubbins", "designation": "Python Developer", "gender": "female", "teamName": "TeamD" },
+    { "id": 12, "fullName": "Con Melville", "designation": "Java Developer", "gender": "female", "teamName": "TeamB" },
+    { "id": 13, "fullName": "Dalli Shimmings", "designation": "Javascript Developer", "gender": "female", "teamName": "TeamC" },
+    { "id": 14, "fullName": "Patrizia Sarjant", "designation": "Java Developer", "gender": "male", "teamName": "TeamD" },
+    { "id": 15, "fullName": "Lauraine Jackalin", "designation": "Python Developer", "gender": "male", "teamName": "TeamB" },
+    { "id": 16, "fullName": "Ebenezer Josskovitz", "designation": "Python Developer", "gender": "female", "teamName": "TeamB" },
+    { "id": 17, "fullName": "Aggi Graves", "designation": "Javascript Developer", "gender": "female", "teamName": "TeamA" },
+    { "id": 18, "fullName": "Horton Falkus", "designation": "Node Developer", "gender": "female", "teamName": "TeamB" },
+    { "id": 19, "fullName": "Lainey Collar", "designation": "Java Developer", "gender": "female", "teamName": "TeamA" },
+    { "id": 20, "fullName": "Filip Brockley", "designation": "Java Developer", "gender": "male", "teamName": "TeamA" },
+    { "id": 21, "fullName": "Yetta Fidock", "designation": "React Developer", "gender": "female", "teamName": "TeamA" },
   ]);
 
 
@@ -48,6 +48,7 @@ const Employees = () => {
     setEmployees(transformedEmp);
   }
 
+
   return (
     <main className="container">
       <div className="row justify-content-center mt-3 mb-3">
@@ -65,10 +66,14 @@ const Employees = () => {
           <div className="card-collection">
             {
               employees.map((emp) => (
-                <div id={emp.id} className="card m-2" style={{ cursor: "pointer" }} onClick={employeeCardClickHandler} >
+                <div id={emp.id}
+                  className={(emp.teamName === selectedTeam) ? "card m-2 standout" : "card m-2"}
+                  style={{ cursor: "pointer" }}
+                  onClick={employeeCardClickHandler} >
 
                   {/*  <img src={emp.gender === "male" ? maleProfile : femaleProfile} className="card-img-top" /> */}
-                  {(emp.gender === "male") ? <img src={maleProfile} className="card-img-top" />
+                  {(emp.gender === "male")
+                    ? <img src={maleProfile} className="card-img-top" />
                     : <img src={femaleProfile} className="card-img-top" />}
                   <div className="card-body">
                     <h5 className="card-title">Full Name: {emp.fullName}</h5>
