@@ -6,7 +6,8 @@ import { useEffect, useState } from 'react';
 
 export default function App() {
 
-  const [selectedTeam, setTeam] = useState("TeamB");
+  // pick the selectedTeam if present into localstorage else "TeamB" 
+  const [selectedTeam, setTeam] = useState(JSON.parse(localStorage.getItem('selectedTeam')) || "TeamB" );
 
   const [employees, setEmployees] = useState([
     { "id": 1, "fullName": "Merridie Labrenz", "designation": "React Developer", "gender": "female", "teamName": "TeamC" },
