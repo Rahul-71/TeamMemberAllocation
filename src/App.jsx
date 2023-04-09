@@ -3,10 +3,11 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Employees from './Employees';
 import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 export default function App() {
 
-  const [selectedTeam, setTeam] = useState(JSON.parse(localStorage.getItem('selectedTeam')) || "TeamB" );
+  const [selectedTeam, setTeam] = useState(JSON.parse(localStorage.getItem('selectedTeam')) || "TeamB");
 
   const [employees, setEmployees] = useState(JSON.parse(localStorage.getItem('employees')) || [
     { "id": 1, "fullName": "Merridie Labrenz", "designation": "React Developer", "gender": "female", "teamName": "TeamC" },
@@ -62,18 +63,25 @@ export default function App() {
 
 
   return (
-    <main>
+    <Router>
       <Header
         selectedTeam={selectedTeam}
         teamMemberCount={employees.filter((emp) => emp.teamName === selectedTeam).length}
       />
-      <Employees
-        employees={employees}
-        selectedTeam={selectedTeam}
-        teamSelectionHandler={teamSelectionHandler}
-        employeeCardClickHandler={employeeCardClickHandler}
-      />
+      <Routes>
+        <Route path='/'
+          element={
+            <Employees
+              employees={employees}
+              selectedTeam={selectedTeam}
+              teamSelectionHandler={teamSelectionHandler}
+              employeeCardClickHandler={employeeCardClickHandler}
+            />
+          }
+        >
+        </Route>
+      </Routes>
       <Footer />
-    </main>
+    </Router>
   )
 }
