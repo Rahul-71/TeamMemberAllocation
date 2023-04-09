@@ -65,6 +65,7 @@ export default function App() {
   }, [selectedTeam]);
 
 
+  // start from the current timestamp : https://youtu.be/u6gSSpfsoOQ?t=5884
   return (
     <Router>
       <Nav />
