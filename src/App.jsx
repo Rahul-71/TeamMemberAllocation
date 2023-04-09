@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Employees from './Employees';
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import GroupedTeamMembers from './GroupedTeamMembers';
 
 export default function App() {
 
@@ -80,8 +81,17 @@ export default function App() {
           }
         >
         </Route>
+
+        <Route path='/GroupedTeamMembers' element={
+          <GroupedTeamMembers />
+        }>
+        </Route>
+
       </Routes>
       <Footer />
     </Router>
   )
 }
+
+
+
