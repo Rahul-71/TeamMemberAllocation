@@ -53,7 +53,10 @@ export default function App() {
 
   return (
     <main>
-      <Header />
+      <Header
+        selectedTeam={selectedTeam}
+        teamMemberCount={employees.filter((emp) => emp.teamName === selectedTeam).length}
+      />
       <Employees
         employees={employees}
         selectedTeam={selectedTeam}
