@@ -27,6 +27,16 @@ const GroupedTeamMembers = ({ employees, selectedTeam, setTeam }) => {
     return teams;
   }
 
+  const teamClickHandler = (event) => {
+    var newGroupData = groupedEmployees.map(groupData => groupData.team === event.currentTarget.id
+      ? { ...groupData, collapsed: !groupData.collapsed }
+      : groupData);
+
+    setGroupedData(newGroupData);
+    setTeam(event.currentTarget.id);
+    
+  }
+
   return (
     // <div>
     //   <h1 className="mt-4 p5 text-center rounded" >GroupedTeam Members</h1>
@@ -36,11 +46,11 @@ const GroupedTeamMembers = ({ employees, selectedTeam, setTeam }) => {
         groupedEmployees.map(item => {
           return (
             <div key={item.team} className="card m-2" style={{ cursor: "pointer" }} >
-              <h4 id={item.team} className="card-header text-secondary bg-white" >
+              <h4 id={item.team} className="card-header text-secondary bg-white" onClick={teamClickHandler}  >
                 Team Name: {item.team}
               </h4>
-              <div id={"collapse_" + item.team} className={item.collapsed === true ? "collapsed" : ""} >
-                <hr/>
+              <div id={"collapse_" + item.team} className={item.collapsed === true ? "collapse" : ""} >
+                <hr />
                 {
                   item.members.map(member => {
                     return (
@@ -48,7 +58,7 @@ const GroupedTeamMembers = ({ employees, selectedTeam, setTeam }) => {
                         <h5 className="card-title mt-2">
                           <span className="text-dark">Full Name: {member.fullName}</span>
                         </h5>
-                          <p>Designation: {member.designation}</p>
+                        <p>Designation: {member.designation}</p>
                       </div>
                     )
                   })
