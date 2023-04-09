@@ -2,7 +2,7 @@ import './App.css'
 import Header from "./Header";
 import Footer from "./Footer";
 import Employees from './Employees';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function App() {
 
@@ -49,6 +49,16 @@ export default function App() {
 
     setEmployees(transformedEmp);
   }
+
+  // execute the function when employees changes
+  useEffect(() => {
+    localStorage.setItem('employeeList', JSON.stringify(employees))
+  }, [employees]);
+
+  // execute the function when selectedTeam changes
+  useEffect(() => {
+    localStorage.setItem('selectedTeam', JSON.stringify(selectedTeam));
+  }, [selectedTeam]);
 
 
   return (
