@@ -66,7 +66,7 @@ export default function App() {
 
   return (
     <Router>
-      <Nav/>
+      <Nav />
       <Header
         selectedTeam={selectedTeam}
         teamMemberCount={employees.filter((emp) => emp.teamName === selectedTeam).length}
