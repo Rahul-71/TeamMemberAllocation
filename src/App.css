@@ -7,6 +7,32 @@ body{
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.standout {
+/* .standout {
   box-shadow: rgba(0,0,0,0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+  transform: translateY(-8px);
+} */
+
+/* .standout {
+  box-shadow: rgba(0,0,0,0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+  transform: scale(1.03);
+  z-index: 1;
+  position: relative;
+  top: -3px;
+} */
+
+
+/* - Position: relative sets the position of an element to relative so that it is positioned relative to its original positioning
+- Z-index: 1 sets the z-index of an element to one which indicates that it will always be positioned on top of any other element that would overlap with it
+- Box-shadow: rgba(0,0,0,0.86) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; creates a drop shadow effect using the rgba and rgb color values
+- Transform: scale(1.025); sets the scale of the element to 1.025
+- Box-shadow: 0px 10px 15px -15px #000000; creates a second drop shadow effect using the hexadecimal color code
+- Border: 2px solid #d13333; sets a 2px solid border using the hexadecimal color code
+*/
+.standout {
+  position: relative;
+  z-index: 1;
+  box-shadow: rgba(0,0,0,0.86) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+  transform: scale(1.025);
+  box-shadow: 0px 10px 15px -15px #000000;
+  border: 2px solid #d13333;
 }
