@@ -34,13 +34,11 @@ const GroupedTeamMembers = ({ employees, selectedTeam, setTeam }) => {
 
     setGroupedData(newGroupData);
     setTeam(event.currentTarget.id);
-    
+
   }
 
   return (
-    // <div>
-    //   <h1 className="mt-4 p5 text-center rounded" >GroupedTeam Members</h1>
-    // </div>
+
     <main className="container">
       {
         groupedEmployees.map(item => {
