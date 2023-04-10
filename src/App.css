@@ -36,3 +36,10 @@ body{
   box-shadow: 0px 10px 15px -15px #000000;
   border: 2px solid #d13333;
 }
+
+@media only screen and (max-width:600px){
+  .card-collection{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
